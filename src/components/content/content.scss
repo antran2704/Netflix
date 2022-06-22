@@ -1,0 +1,98 @@
+@import "../../App.scss";
+
+.content {
+  color: var(--color-white);
+  padding: 20px 20px 0 20px;
+  position: relative;
+}
+
+.title-content {
+  font-size: 20px;
+  user-select: none;
+}
+
+.content-list {
+  &::-webkit-scrollbar {
+    background-color: transparent;
+  }
+
+  &:hover .content-wrap {
+    opacity: 0.4;
+  }
+}
+
+.content-wrap {
+  transform: scale(1);
+  max-width: 360px;
+  max-height: 200px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-out 0s;
+  user-select: none;
+  overflow: hidden;
+  border-radius: 6px;
+  position: relative;
+
+  &:hover {
+    opacity: 1 !important;
+    transform: scale(1.1);
+    z-index: 10;
+    transition: all linear 0.2s;
+  }
+}
+.isNetflix {
+  max-width: 400px;
+  max-height: 500px;
+
+  & .next-content,
+  .prev-content {
+    width: 40px;
+    height: 50px;
+    font-size: 50px;
+  }
+}
+.img-content {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.name-movie {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  font-size: 14px;
+  transition: all linear 0.2s;
+}
+
+.content-icon {
+  color: var(--color-white);
+  transform: scale(1);
+  transition: all linear 0.1s;
+}
+.next-content,
+.prev-content {
+}
+.next-content {
+  @include position(right);
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all linear 0.1s;
+  }
+  &:hover .content-icon {
+    transform: scale(1.2);
+    transition: all linear 0.1s;
+  }
+}
+
+.prev-content {
+  @include position(left);
+  &:hover .content-icon {
+    transform: scale(1.2);
+    transition: all linear 0.1s;
+  }
+}

@@ -1,0 +1,55 @@
+@import "../../App.scss";
+
+.navbar {
+    width: 100%;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all linear 0.2s;
+    z-index: 20;
+
+    @include tablet {
+        flex-direction: column;
+        gap: 0px;
+    }
+}
+
+.navbar-logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar-icon {
+    font-size: 20px;
+    color: #bbbbbb;
+    position: absolute;
+    transform: translateX(8px) translateY(10px);
+    cursor: pointer;
+
+   
+}
+
+.navbar-input {
+    width: 0px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    padding: 10px 10px 10px 30px;
+    border: 1px solid transparent;
+    outline: none;
+    position: relative;
+    transition: width linear 0.2s;
+}
+
+.navbar-input:focus {
+    width: 300px;
+    border: 1px solid white;
+    border-radius: 6px;
+    transition: width linear 0.4s;
+    
+}

@@ -1,0 +1,100 @@
+@import "../../App.scss";
+
+.intro {
+  position: relative;
+  padding-top: 56%;
+
+  @include tablet {
+    padding-top: 100%;
+
+   }
+ 
+   @include mobile {
+    margin-top: 60px;
+   }
+}
+
+.video-intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.intro-infor {
+  max-width: 550px;
+  padding-left: 20px;
+  width: 100%;
+  color: var(--color-white);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 2;
+
+  @include mobile {
+    max-width: 400px;
+  }
+}
+.intro-heading {
+  font-size: 60px;
+  transition: all ease 0.2s;
+  @include tablet {
+    font-size: 40px;
+  }
+  @include mobile {
+    font-size: 24px;
+  }
+}
+.intro-desc {
+  font-size: 18px;
+  transition: all ease 0.2s;
+  @include tablet {
+    font-size: 16px;
+  }
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+.intro-icon {
+  position: absolute;
+  margin-right: 40px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  padding: 6px;
+  color: var(--color-white);
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all linear 0.1s;
+
+  &:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgba(211, 211, 211, 0.176);
+    transform: scale(1.2);
+    transition: all linear 0.1s;
+  }
+
+  @include tablet {
+    font-size: 30px;
+    margin-right: 30px;
+
+  }
+  @include mobile {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+}
+
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(180deg,transparent,rgba(15,15,15,0.6) 40%, rgba(17,17,17),rgba(17,17,17));
+}
