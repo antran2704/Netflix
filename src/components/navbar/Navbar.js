@@ -10,7 +10,7 @@ function Navbar() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate('')
+    navigate('/Netflix')
   },[])
   function handleChange(e) {
     let keywords = e.target.value;

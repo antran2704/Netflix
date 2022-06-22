@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Navbar />
           <Routes>
-              <Route path="/" element = {<HomePage/>}/>
+              <Route path="/Netflix" element = {<HomePage/>}/>
               <Route path="/search" element = {<SearchPage/>}/>          
           </Routes>
       </Router>
