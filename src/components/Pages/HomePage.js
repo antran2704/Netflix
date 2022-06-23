@@ -7,7 +7,6 @@ import Modal from "../modal/Modal";
 
 function HomePage() {
   const { GetmoviesDetail } = useSelector((state) => state.infoMovies);
-  console.log(GetmoviesDetail)
   return (
     <div>
       <Intro />

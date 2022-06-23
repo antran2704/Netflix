@@ -18,7 +18,7 @@ function Navbar() {
     
     (keywords.length > 0)
       ? navigate(`/search?keywords=${keywords.trim()}`)
-      : navigate('/');
+      : navigate('/Netflix');
   }
   return (
     <nav
@@ -29,7 +29,7 @@ function Navbar() {
           : { backgroundColor: "var(--color-background)" }
       }
     >
-      <Link to= "/">
+      <Link to= "/Netflix">
         <img className="navbar-logo" alt="" src={NetflixLogo} />
       </Link>
       <div>

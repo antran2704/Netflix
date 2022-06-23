@@ -61,10 +61,17 @@
   align-items: center;
   justify-content: center;
   color: var(--color-white);
-
+  text-align: center;
+  
   @include mobile {
     margin-top: 50%;
     font-size: 10px;
     text-align: center;
   }
+}
+.show_error {
+  display: block;
+}
+.hide_error {
+  display: none;
 }

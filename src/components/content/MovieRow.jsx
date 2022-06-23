@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useDispatch } from "react-redux";
 import Slider from "react-slick";
 import * as types from "../store/actions";
@@ -6,7 +7,6 @@ import Next from "./Next";
 import Prev from "./Prev";
 function MovieRow({ movies, title, isNetflix, idSection}) {
   const dispatch = useDispatch()
-
   var settings = {
     dots: false,
     infinite: true,
@@ -76,4 +76,4 @@ function MovieRow({ movies, title, isNetflix, idSection}) {
   );
 }
 
-export default MovieRow;
+export default memo(MovieRow);

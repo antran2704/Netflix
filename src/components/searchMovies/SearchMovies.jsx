@@ -12,13 +12,12 @@ function SearchMovies() {
   const dispatch = useDispatch()
   const keywords = useQuery().get('keywords')
   const {SearchMovies, GetmoviesDetail} = useSelector((state) => state.infoMovies)
-  console.log(GetmoviesDetail)
   useEffect(() => {
     const handler = setTimeout(function() {
       if(keywords.length > 0) {
         dispatch(types.searchMovies(keywords))
       }
-    },2000)
+    },1000)
     
     return () => clearTimeout(handler)
   },[keywords,dispatch])
@@ -54,7 +53,7 @@ function SearchMovies() {
         </div>
       ) : (
         <div className="search_error">
-          <h1>{`You searh "${keywords}" did not have any matches`}</h1>
+          <h1>No movies! You can search by English name or unsigned keywords.</h1>
         </div>
       )}
     </div>
