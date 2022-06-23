@@ -12,6 +12,7 @@ function Intro() {
     <div className="intro">
       <ReactPlayer
         playing={true}
+        playsinline = {true}
         loop={true}
         volume={1}
         width="100%"

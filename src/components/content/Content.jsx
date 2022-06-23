@@ -32,6 +32,7 @@ function Content() {
         movies={NetflixOriginal}
         title="Netflix Originals"
         isNetflix="true"
+        idSection= "Netflix Originals"
       />
       <MovieRow movies={TrendingMovies} title="Trending Movies" idSection = "Trending Movies"/>
       <MovieRow movies={TopratedMovies} title="Top Rated Movies" idSection = "Top Rated Movies"/>
